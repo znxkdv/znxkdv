@@ -1,90 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamos de novo?</title>
+    <title>Eu te amo mais que tudo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
             text-align: center;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
         }
         h1 {
-            color: #e74c3c;
+            font-size: 2.5em;
             margin-top: 20px;
-            font-size: 2em;
+            font-weight: bold;
+            animation: heartbeat 1.5s infinite;
+            padding: 0 10px;
+        }
+        .heart {
+            font-size: 5em;
+            color: red;
+            animation: heart-beat 1s infinite;
         }
         .container {
             position: relative;
-            display: inline-block;
-            margin-top: 20px;
-            max-width: 100%;
-            overflow: hidden;
-        }
-        .legenda {
-            position: absolute;
-            top: -40px; /* Posição da legenda acima da imagem */
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            font-size: 24px;
-            border-radius: 5px;
-            z-index: 2;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         .image {
-            width: 100%;
-            height: auto;
+            width: 70%;
+            max-width: 400px;
+            margin: 20px;
             border-radius: 10px;
         }
-        audio {
-            margin-top: 20px;
-            border-radius: 10px;
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
-        .heart {
-            position: absolute;
-            animation: heartAnimation 1.5s infinite;
-            font-size: 30px;
-            color: #e74c3c;
-        }
-        @keyframes heartAnimation {
-            0% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-30px) scale(1.5); }
-            100% { transform: translateY(0) scale(1); }
-        }
-        /* Responsividade */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            .legenda {
-                font-size: 18px;
-            }
+        @keyframes heart-beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <h1>Vamos de novo?</h1>
-    <div class="container">
-        <div class="legenda">Vamos de novo?</div>
-        <img src="euevc.png" alt="Imagem Exemplo" class="image">
-    </div>
-
-    <!-- Adicionando música sem controles e autoplay -->
-    <audio autoplay>
+    <audio autoplay loop>
         <source src="euevc.mp3" type="audio/mp3">
-        Seu navegador não suporta o elemento de áudio.
+        Seu navegador não suporta o formato de áudio.
     </audio>
-
-    <!-- Corações flutuando -->
-    <div class="heart" style="top: 10%; left: 20%;">❤️</div>
-    <div class="heart" style="top: 30%; left: 50%;">❤️</div>
-    <div class="heart" style="top: 50%; left: 30%;">❤️</div>
-    <div class="heart" style="top: 70%; left: 60%;">❤️</div>
+    
+    <div class="container">
+        <h1>Eu te amo mais que tudo</h1>
+        <div class="heart">❤️</div>
+        <img src="euevc.png" alt="Eu e você" class="image">
+    </div>
 </body>
 </html>
