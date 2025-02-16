@@ -1,54 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Te Amo</title>
+    <title>Vamos de novo?</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
             text-align: center;
-            position: relative;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
         .container {
             position: relative;
+            display: inline-block;
+            margin-top: 20px;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .texto {
+        .legenda {
             position: absolute;
-            top: 50%;
+            top: -40px; /* Posição da legenda acima da imagem */
             left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
+            transform: translateX(-50%);
             background: rgba(0, 0, 0, 0.5);
+            color: white;
             padding: 10px;
+            font-size: 24px;
             border-radius: 5px;
         }
+        iframe {
+            margin-top: 20px;
+        }
         audio {
-            display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <h1>Vamos de novo?</h1>
     <div class="container">
-        <img src="euevc.png" alt="Nós dois">
-        <div class="texto">Te amo mais que tudo</div>
+        <div class="legenda">Vamos de novo?</div>
+        <img src="https://via.placeholder.com/600x400" alt="Imagem Exemplo" width="600">
     </div>
-    <audio autoplay loop>
-        <source src="euevc.mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio HTML5.
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+    <!-- Adicionando música -->
+    <audio controls autoplay>
+        <source src="URL_DA_MUSICA.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
     </audio>
 </body>
 </html>
